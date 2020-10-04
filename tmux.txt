@@ -1,3 +1,6 @@
+Fix stale ssh-auth-sock envvar when rejoining detached sessions
+- https://stackoverflow.com/questions/21378569/how-to-auto-update-ssh-agent-environment-variables-when-attaching-to-existing-tm
+
 Use vim keybindings for tmux
 
 - [vim style tmux config · GitHub](https://gist.github.com/tsl0922/d79fc1f8097dde660b34)
