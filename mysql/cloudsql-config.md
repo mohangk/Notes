@@ -1,0 +1,2 @@
+- enabling/disabling bin_log
+    - gcloud sql instances patch dest-db-57 --no-enable-bin-log

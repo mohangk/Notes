@@ -28,7 +28,7 @@
 
 
 
-Disabling binary logs during data load
+###### Disabling binary logs during data load
 
 Start mysql without bin-log enabled to ensure you dont have to deal with growing binary logs sizes when doing a restore. Sometimes you can't do this within the shell due to the user so you have to do it in the config
 
@@ -37,8 +37,28 @@ Start mysql without bin-log enabled to ensure you dont have to deal with growing
 skip-log-bin
 ```
 
+###### Increase the lock_wait_timeout
+ 
+so that parallel loads into the same table dont end up just dying
+
+https://stackoverflow.com/questions/6000336/how-to-debug-lock-wait-timeout-exceeded-on-mysql
+
+-- need to figure out if there is a better way to do this with mysqlsh?
+
+###### innodb_autoinc_lock_mode
+Set it to 2 if using BINLOG_FORMAT=ROW
+We recommend setting it to 2 when the BINLOG_FORMAT=ROW. With interleaved, INSERT statements don’t use the table-level AUTO-INC lock and multiple statements can execute at the same time. Setting it to 0 or 1 can cause a huge hit in concurrency for certain workloads.
+
+Interleaved (or 2) is the fastest and most scalable lock mode, but it is not safe if using STATEMENT-based replication or recovery scenarios when SQL statements are replayed from the binary log. Another consideration – which you shouldn’t rely on anyway – is that IDs might not be consecutive with a lock mode of 2. That means you could do three inserts and expect IDs 100,101 and 103, but end up with 100, 102 and 104. For most people, this isn’t a huge deal.
+
+8
+
+- https://www.percona.com/blog/2017/07/26/what-is-innodb_autoinc_lock_mode-and-why-should-i-care/
+- https://dev.mysql.com/doc/refman/5.7/en/innodb-auto-increment-handling.html
+
 References
 
 - [MySQL Shell API: Main Page](https://dev.mysql.com/doc/dev/mysqlsh-api-javascript/8.0/)
 - [logs - Disable MySQL binary logging with log_bin variable - Database Administrators Stack Exchange](https://dba.stackexchange.com/questions/72770/disable-mysql-binary-logging-with-log-bin-variable)
 - [Hartwork Blog · How to disable MySQL binary logging](https://blog.hartwork.org/posts/how-to-disable-mysql-binary-logging/)
+- https://mysqlserverteam.com/mysql-shell-dump-load-part-2-benchmarks/
