@@ -7,4 +7,3 @@
 * Trigger based
 * Logical
     * No out of the box DDL change support - [GitHub - enova/pgl\_ddl\_deploy: Transparent DDL replication using Pglogical](https://github.com/enova/pgl_ddl_deploy)
-

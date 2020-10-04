@@ -1,8 +1,4 @@
-## Starting the database
 
-pg_ctl -D /usr/local/var/postgres start
-pg_ctl -D /usr/local/var/postgres -l logfile start 
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 ### postgres writing to disk
 
@@ -54,6 +50,10 @@ Reference
 [PostgreSQL: Documentation: 12: 29.4. WAL Configuration](https://www.postgresql.org/docs/12/wal-configuration.html)
 
 [PostgreSQL: Documentation: 12: 29.1. Reliability](https://www.postgresql.org/docs/current/wal-reliability.html)
+
+#### Key WAL config options on the replica
+- When a conflicting query is short, it's typically desirable to allow it to complete by delaying WAL application for a little bit; but a long delay in WAL application is usually not desirable. So the cancel mechanism has parameters, max_standby_archive_delay and max_standby_streaming_delay, that define the maximum allowed delay in WAL application. 
+- Remedial possibilities exist if the number of standby-query cancellations is found to be unacceptable. The first option is to set the parameter hot_standby_feedback, which prevents VACUUM from removing recently-dead rows and so cleanup conflicts do not occur. If you do this, you should note that this will delay cleanup of dead rows on the primary, which may result in undesirable table bloat.
 
 ## Fermi numbers
 
