@@ -2,6 +2,9 @@
 
 ### postgres writing to disk
 
+#### Key config options related to WAL
+- https://www.postgresql.org/docs/13/runtime-config-wal.htm
+
 ##### wal checkpoint
 
 1. Point in the squest of transactions at which it is guaranteed that the head and index data files have been updated with all informaition before that checkpont

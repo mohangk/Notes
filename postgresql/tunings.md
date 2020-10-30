@@ -40,3 +40,14 @@ References:
 - https://resources.2ndquadrant.com/webinar-postgres-vacuuming-through-pictures 
 - https://resources.2ndquadrant.com/webinar-power-of-indexing-in-postgresql \
 - https://news.ycombinator.com/item?id=24606163
+
+##### replication related tunings
+On systems that support the keepalive socket option, setting tcp_keepalives_idle, tcp_keepalives_interval and tcp_keepalives_count helps the primary promptly notice a broken connection.
+
+#### 
+Video on postgresql config settings
+
+https://www.youtube.com/watch?v=IFIXpm73qtk&t=783s
+
+https://www.percona.com/blog/2020/09/29/postgresql-configuration-changes-you-need-to-make-post-installation/
+
