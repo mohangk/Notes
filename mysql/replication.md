@@ -68,6 +68,19 @@
 
 - group replication / sync - 2PC - ensures that data is committed on at least one slave 
 
+
+##### debugging replication lag
+ - https://making.pusher.com/debugging-mysql-replication-lag/
+ - https://aws.amazon.com/premiumsupport/knowledge-center/rds-mysql-high-replica-lag/#Resolution
+ - https://scalegrid.io/blog/mysql-tutorial-understanding-the-seconds-behind-master-value/
+ 
+##### enabling parallel replication
+https://www.percona.com/blog/2018/10/17/can-mysql-parallel-replication-help-my-slave/
+https://www.percona.com/blog/2016/02/10/estimating-potential-for-mysql-5-7-parallel-replication/
+
+##### checking actual replication lag
+https://www.percona.com/doc/percona-toolkit/LATEST/pt-heartbeat.html
+
 ##### logical backup and restore
 
 - https://severalnines.com/database-blog/mysql-cloud-online-migration-amazon-rds-your-own-server-part2

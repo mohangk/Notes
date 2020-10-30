@@ -1,2 +1,5 @@
-- enabling/disabling bin_log
-    - gcloud sql instances patch dest-db-57 --no-enable-bin-log
+* enabling/disabling bin\_log
+    * gcloud sql instances patch dest-db-57 --no-enable-bin-log
+
+* always enable performance schema
+   * gcloud sql instances patch <instance> --database-flags performance_schema=on
