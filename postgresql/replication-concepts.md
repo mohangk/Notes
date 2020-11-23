@@ -31,7 +31,7 @@ server writes the entire content of each disk page to WAL during the first modif
 \* `minimal` is default.
 \* `replica` adds logging require for WAL archiving and read only queries on standby server.
 \* `logical` adds information to allow extracting logical changes sets from WAL. Can start with 100
-* synchronous_commit=on #defautl
+* synchronous_commit=on #default
      * This configuration is used both to determine  the guarantees of the "transaction commit". On means that it will guarantee that WAL records were flushed to disk before the command returns succes  to the client.  Having it off - doesnt leave the database in an inconsistent state, but leaves clients in an inconsistent state. 
      * If synchronous_standby_names is non-empty, this parameter also controls whether or not transaction commits will wait for their WAL records to be replicated to the standby server(s).    
          *  **local** causes commits to wait for local flush to disk, but not for replicas. This defeats the purpose of using synchronous replication . This  is provided for completeness.
