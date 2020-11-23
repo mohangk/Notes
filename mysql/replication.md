@@ -90,3 +90,9 @@ references
 - https://www.percona.com/blog/2017/02/07/overview-of-different-mysql-replication-solutions/
 - https://medium.com/@siddontang/dive-into-mysql-replication-protocol-cd14791bcc
 - [Setting up MySQL Master-Slave Replication with GTID &#8211; dinfratechsource](https://dinfratechsource.com/2019/05/14/setting-up-mysql-master-slave-replication-with-gtid/) 
+
+##### Differences between primary and replica in replication
+
+Because the binlog is logical - this is possible. However if there are alter tables that refer to indexes that dont exist on the other node it could break the replication
+
+https://stackoverflow.com/questions/4412656/can-you-index-tables-differently-on-master-and-slave-mysql
