@@ -17,13 +17,14 @@
 2. The primary sends wal\_sender the WAL data from the replica LSN till the latest LSN
 3. The replica writes the WAL data to WAL segments. The startup process on the the replica replays the data written to the WAL segment.
 
-#####
 
 ##### On the replica
 
 * run `pg_basebackup` to copy the data over from the primary
 `pg_basebackup -h 127.0.0.1 -U cary -p 5432 -D db-slave -P -Xs -R`
 * Creates postgresql.auto.conf and standby.signal file
+* “standby.signal” – indicates the server should start up as a hot standby
+* When the server is promoted the standby.signal file is removed
 
 #### Quick setup
 
@@ -64,11 +65,36 @@ a. Allow connections from subnet
 2. Configure replica to use the slot by setting the following in postgresql.conf. Requires stop and start of server.
 `primary_slot_name = 'replica'`
 
-References
 
+#### recovery.conf values
+- The dedicated recovery.conf file isnot used anymore, but this config options still existin in the  postgresql.conf file
+primary_conninfo = 'user=replicator passfile=/tmp/pgpass host=10.128.15.244 port=5432 sslmode=prefer application_name=pg-patroni4-1 gssencmode=prefer'
+recovery_target = ''
+recovery_target_lsn = ''
+recovery_target_name = ''
+recovery_target_time = ''
+recovery_target_timeline = 'latest'
+recovery_target_xid = ''
+
+- only one recovery_target option should be set 
+
+- Replication configuration settings may be present even on primary servers
+Any replication configuration settings (e.g. “primary_conninfo”) configured will be read by PostgreSQL and will be visible as normal, but their presence does not indicate whether the node is a standby or not. It is the existance of the standby.signal file that determines that
+
+References:
+
+* https://www.2ndquadrant.com/en/blog/replication-configuration-changes-in-postgresql-12/
 * https://www.postgresql.org/docs/10/app-pgbasebackup.html
 * https://www.highgo.ca/2019/11/07/streaming-replication-setup-in-pg12-how-to-do-it-right/
 * https://www.percona.com/blog/2018/11/30/postgresql-streaming-physical-replication-with-slots/
 * https://www.percona.com/blog/2019/10/11/how-to-set-up-streaming-replication-in-postgresql-12/
 * https://www.postgresql.org/docs/current/warm-standby.html
 * https://en.wikibooks.org/wiki/PostgreSQL/Replication
+
+### Promotion of replica to primary
+
+pg_ctl promote -D /path/to/data-dir
+
+To trigger failover of a log-shipping standby server, run pg_ctl promote, call pg_promote(), or create a trigger file with the file name and path specified by the promote_trigger_file. If you're planning to use pg_ctl promote or to call pg_promote() to fail over, promote_trigger_file is not required. 
+
+References: https://www.postgresql.org/docs/current/warm-standby-failover.html

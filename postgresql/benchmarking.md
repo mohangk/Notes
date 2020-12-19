@@ -9,7 +9,8 @@ TPC-C tests based on oltpbench as alluded in this other pgsql-hackers discussion
 
 benchmarksql is yet another TPC-C test that was used to validate the changes to B-Tree page splits.
 
-pg_ycsb is the new kid in town, improving on pgbench and already being used by some of the PostgreSQL hackers.
+* pg_ycsb - https://github.com/postgrespro/pg_ycsb - ycsb implemented in pgbench
+
 
 pgbench-tools as the name suggests, is based on pgbench and while not having received any updates since 2016, it is the product of Greg Smith, the author of PostgreSQL High Performance books.
 
