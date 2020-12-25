@@ -1,11 +1,11 @@
 ## Allocation of data with `new`
 
+
 new(T) -- does not allocate memory, only zero-izes it *T. Zero value can be used.
 
+
 f := new(File)
-
 f.fd = fd
-
 f.name = name
 
 ...
@@ -23,6 +23,10 @@ return &f
 **OR**
 
 &File(fd: fd, name: name)
+
+
+Struct{field1: "val field1", field2: "val field2"}
+new is a simple case of composite literal
 
 ## Allocation with `make`
 
