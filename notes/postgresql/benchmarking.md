@@ -1,4 +1,4 @@
-##### Different tools
+## Different tools
 
 
 The AWS Benchmark mentioned above is based on pgbench and sysbench.
@@ -25,10 +25,22 @@ Reference:
 https://severalnines.com/database-blog/benchmarking-managed-postgresql-cloud-solutions-part-one-amazon-aurora
 
 
-##### pgbench
+## pgbench
 
 * pgbench -i - initailise the tables that are used by pgbench
 * pgbench -i -Uxx -hxx dbname - provide a database to be used by pgbench
 
+### Initialising
+
  * Initialising to get the right sized database https://www.cybertec-postgresql.com/en/a-formula-to-calculate-pgbench-scaling-factor-for-target-db-size/
+
+pgbench -i -s 100 - 10 mil rows ~ 20secs to populate, ~ 1.5GB data
+
+### Custom benchmarks
+
+https://www.cybertec-postgresql.com/en/insert-only-data-modeling-with-postgresql/
+https://satob.hatenablog.com/entry/2020/05/01/035727
+
+
+
 
