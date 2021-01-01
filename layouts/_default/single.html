@@ -1,0 +1,42 @@
+{{ define "main" }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- TODO: gallery -->
+    <header>
+      <h1 itemprop="name headline">
+        {{ .Title }}
+      </h1>
+      <div class="meta">
+        <div class="postdate">
+          {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
+             <time datetime="{{ .Lastmod }}" itemprop="dateModified">{{ .Lastmod.Format $dataFormat }}</time>
+        </div>
+        {{ if gt .Params.categories 0 }}
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            {{ range $index, $value := .Params.categories }}
+            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
+            <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+        {{ if gt .Params.tags 0 }}
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            {{ range $index, $value := .Params.tags }}
+            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
+            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </header>
+  <div class="content" itemprop="articleBody">
+
+  {{ if (eq .Type "search") }}
+    <!-- TODO: search https://gohugo.io/tools/search/ -->
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+  </div>
+</article>
+{{ end }}

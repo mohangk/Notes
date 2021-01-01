@@ -1,0 +1,63 @@
+baseURL = "http://mohangk.com/"
+languageCode = "en-us"
+title = "Mohan Krishnan - code, write & share"
+theme = "cactus"
+enableGitInfo = true
+paginate = 20
+
+[frontmatter]
+date = [":git"]
+
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+
+[[menu.feed]]
+    name = "rss"
+    url = "/index.xml"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+
+  colortheme = "classic" # dark, light, white, or classic
+  css = ["css/custom.css"]
+  logo = "images/notes-logo2.png"
+  rss = true # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+
+  # Home page settings
+  description = "A place to keep and share my technical notes, hope you find it useful."
+  mainSection = "categories" # your main section
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+  showProjectsList = true # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/gohugoio" # title link for projects list
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # default
+
+  # Post page settings
+  show_updated = true # default
+
+
+  [params.comments]
+    enabled = false # default
+    engine = "disqus" # more supported engines will be added.
+
+  # the value of name should be an valid font awesome icon name (brands type)
+  # https://fontawesome.com/icons?d=gallery&s=brands
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/mohangk"
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/mohangk"
+  [[params.social]]
+    name = "email"
+    link = "mohangk@gmail.com"  # no need for "mailto:" in the head
