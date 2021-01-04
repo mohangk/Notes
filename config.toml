@@ -8,9 +8,8 @@ paginate = 20
 [frontmatter]
 date = [":git"]
 
-
 [[menu.main]]
-    name = "Categories"
+    name = "Writings"
     url = "/categories/"
     weight = 2
 
