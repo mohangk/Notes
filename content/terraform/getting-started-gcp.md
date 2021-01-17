@@ -86,30 +86,6 @@ E.g.
 ### Reference
 - https://www.terraform.io/docs/provisioners/
 
-## `variables "name"` block
-
-- Variables need to be defined before they can be used. 
-E.g.
-```tf
-variable "zone" {
-    type = string
-    default = "us-central1-a"
-}
-```
-- Idiomatic approach is to collect all the variable definition into a variables.tf file
-- Variable values (if a default is not provided) can be:
-  - Captured at the point of execution 
-  - Passed in via commandline
-  - Defined in a terraform.tfvars file like so
-  ```tf
-  zone = "us-central1-b"
-  ```
-## `output "name"` block
-- A way to present data back to the user, e.g.
-```tf
-  value = google_compute_address.vm_static_ip.address
-```
-- Idiomatic approach is to put all the outputs in to a outputs.tf file 
 ## Cheatsheet
 
 1. `terraform init` - downloads any dependent modules
@@ -120,6 +96,7 @@ variable "zone" {
 6. `terrform taint` - marks a resource as "tainted" i.e. broken. The next time terraform apply is run the resource will be destroyed and re-created.
 7. `terraform refresh` - modifies the state file to capture the actual values as is refleceted in the infrastructure. Deals with drift.
 8. `terraform output` - display the outputs
+9. `terraform import <resource.name> name-of-resource` - allows you to import existing infrastructure into your tfstate. The resource needs to have already been defined in your tf config
 
 ## Reading the terraform output
 
@@ -142,3 +119,72 @@ In the TF output
 - `service_account.scopes` are set based on the values available here https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes
 
 - Can contain a provisioner block 
+
+## google_compute_firewall
+```tf
+resource "google_compute_firewall" "default" {
+  name    = "test-firewall"
+  network = google_compute_network.default.name
+
+  allow {
+    protocol = "icmp"
+  }
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "8080", "1000-2000"]
+  }
+
+  source_tags = ["web"]
+}
+```
+
+## google_compute_region_instance_group_manager
+
+- Manage a regional MIG
+
+```tf
+resource "google_compute_health_check" "autohealing" {
+  name                = "autohealing-health-check"
+  check_interval_sec  = 5
+  timeout_sec         = 5
+  healthy_threshold   = 2
+  unhealthy_threshold = 10 # 50 seconds
+
+  http_health_check {
+    request_path = "/healthz"
+    port         = "8080"
+  }
+}
+
+resource "google_compute_region_instance_group_manager" "appserver" {
+  name = "appserver-igm"
+
+  base_instance_name         = "app"
+  region                     = "us-central1"
+  distribution_policy_zones  = ["us-central1-a", "us-central1-f"]
+
+  version {
+    instance_template = google_compute_instance_template.appserver.id
+  }
+
+  target_pools = [google_compute_target_pool.appserver.id]
+  target_size  = 2
+
+  named_port {
+    name = "custom"
+    port = 8888
+  }
+
+  auto_healing_policies {
+    health_check      = google_compute_health_check.autohealing.id
+    initial_delay_sec = 300
+  }
+}
+```
+
+
+## Reference
+- [Google Cloud provider docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs)
+
+

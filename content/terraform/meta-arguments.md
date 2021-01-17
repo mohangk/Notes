@@ -32,6 +32,8 @@ resource "aws_instance" "server" {
 ## for_each
 
 ```tf
+
+// when used with maps
 resource "azurerm_resource_group" "rg" {
   for_each = {
     a_group = "eastus"
@@ -41,6 +43,7 @@ resource "azurerm_resource_group" "rg" {
   location = each.value
 }
 
+// when used with string lists
 module "bucket" {
   for_each = toset(["assets", "media"])
   source   = "./publish_bucket"
