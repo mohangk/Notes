@@ -1,3 +1,9 @@
+---
+draft: true
+title: Pitr
+categories:
+  - Postgresql
+---
 
 In its place, one of two "signal" files may be placed in the data directory:
 

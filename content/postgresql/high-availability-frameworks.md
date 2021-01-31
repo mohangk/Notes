@@ -1,3 +1,9 @@
+---
+draft: true
+title: High Availability Frameworks
+categories:
+  - Postgresql
+---
 #### Options
 
   * [PostgreSQL Automatic Failover](http://clusterlabs.github.io/PAF/)

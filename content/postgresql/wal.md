@@ -1,3 +1,9 @@
+---
+draft: true
+title: Wal
+categories:
+  - Postgresql
+---
 
 
 ### postgres writing to disk

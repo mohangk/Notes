@@ -1,3 +1,9 @@
+---
+draft: true
+title: Pg Bucardo
+categories:
+  - Postgresql
+---
 # Bucardo setup on CloudSQL PostgreSQL
 
 1. setup cloudsql postgres

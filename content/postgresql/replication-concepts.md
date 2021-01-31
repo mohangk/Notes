@@ -1,3 +1,9 @@
+---
+draft: true
+title: Replication Concepts
+categories:
+  - Postgresql
+---
 #### Postgres replications
 ##### Approaches
 * https://www.percona.com/live/18/sites/default/files/slides/replication-perconalive.pdf
@@ -38,7 +44,6 @@ server writes the entire content of each disk page to WAL during the first modif
          * **remote_write**, commits will wait until replies from the current synchronous standby(s) indicate they have received the commit record of the transaction and written it out to their operating system - but not necessarily flushed to disk. This is a lower guarantee then **on** This setting is sufficient to ensure data preservation even if a standby instance of PostgreSQL were to crash, but not if the standby suffers an operating-system-level crash, since the data has not necessarily reached durable storage on the standby.
        *  **on**, commits will wait until replies from the current synchronous standby(s) indicate they have received the commit record of the transaction and flushed WAL record  to disk. This ensures the transaction will not be lost unless both the primary and all synchronous standbys suffer corruption of their database storage. 
          * **remote_apply**, Provides the strongest replica consistency. Commits will wait until replies from the current synchronous standby(s) indicate they have received the commit record of the transaction and applied it. Clients could either query the primary or the standby, they would have exactly the same view on the data.
-
 References:
  - https://www.cybertec-postgresql.com/en/the-synchronous_commit-parameter/
  - https://www.2ndquadrant.com/en/blog/evolution-fault-tolerance-postgresql-synchronous-commit/

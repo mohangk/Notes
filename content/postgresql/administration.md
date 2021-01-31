@@ -1,3 +1,9 @@
+---
+draft: true
+title: Administration
+categories:
+  - Postgresql
+---
 - reload without restart
   - select pg_reload_conf()
   - sudo systemctl reload postgresql (?)

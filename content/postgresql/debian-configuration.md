@@ -1,3 +1,9 @@
+---
+draft: true
+title: Debian Configuration
+categories:
+  - Postgresql
+---
 ##### Debian installations
 
 * Debian adds lots of customization to how Postgresql is configured and managed. Details available here https://wiki.debian.org/PostgreSql

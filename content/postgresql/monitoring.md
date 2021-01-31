@@ -1,3 +1,9 @@
+---
+draft: true
+title: Monitoring
+categories:
+  - Postgresql
+---
 
 #### Tools
 
@@ -8,4 +14,5 @@
 
 https://pgdash.io/blog/essential-postgres-monitoring-part1.html
 https://severalnines.com/database-blog/postgresql-database-monitoring-tips-what-monitor
+https://medium.com/searce/grafana-dashboard-for-pgbouncer-and-monitor-with-percona-pmm-3170d3eb4d14
 

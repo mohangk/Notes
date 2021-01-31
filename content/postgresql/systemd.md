@@ -1,3 +1,9 @@
+---
+draft: true
+title: Systemd
+categories:
+  - Postgresql
+---
 ##### Gotchas
 
 - systemd automatically unmount filesystem

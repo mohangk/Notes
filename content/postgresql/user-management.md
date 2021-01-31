@@ -1,3 +1,9 @@
+---
+draft: true
+title: User Management
+categories:
+  - Postgresql
+---
 ##### Managing user and their privileges
 
 `create database test;

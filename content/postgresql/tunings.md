@@ -1,3 +1,9 @@
+---
+draft: true
+title: Tunings
+categories:
+  - Postgresql
+---
 #### OS related params
 - `vm.dirty_expire_centisecs`
 - `vm.dirty_background_bytes` - On systems with a lot of memory the default value is far too high, allowing the kernel to accumulate a lot of dirty data in filesystem cache. Kernel often decides to flush them all at once, reducing the benefit of spread checkpoints. Set it lower to ensure that the kernel is flushing dirty data out to disk at a frequen enough rate

@@ -1,3 +1,9 @@
+---
+draft: true
+title: Streaming Replication Setup
+categories:
+  - Postgresql
+---
 #### Streaming replication
 
 ##### High lever overview of the process
