@@ -2,10 +2,9 @@
 draft: false
 title: Isolation Phenomena
 categories:
-  - distributed-systems
-tags:
   - databases
 ---
+
 ## Dirty reads 
 - Reading changes in t2 from t1 before its committed
 

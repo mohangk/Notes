@@ -1,3 +1,9 @@
+---
+draft: true
+title: Kafka
+categories:
+  - Distributed-Systems
+---
 ## kafka up and running
 
 just run zookeeper and kafka locally

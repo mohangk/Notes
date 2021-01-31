@@ -1,3 +1,9 @@
+---
+draft: true
+title: Log_structure_merge_tree
+categories:
+  - Distributed-Systems
+---
 ## log structured merge tree overview
 
 - flushing immutable chunks of data - append only - form of SSTables to disk
