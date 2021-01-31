@@ -2,7 +2,7 @@
 draft: false
 title: Isolation Phenomena
 categories:
-  - databases
+  - Databases
 ---
 
 ## Dirty reads 

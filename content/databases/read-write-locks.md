@@ -2,7 +2,7 @@
 draft: false
 title: Read write locks 
 categories:
-  - databases
+  - Databases
 tags:
   - transactions
 ---
