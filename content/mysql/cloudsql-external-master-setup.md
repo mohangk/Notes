@@ -1,3 +1,9 @@
+---
+draft: true
+title: Cloudsql External Master Setup
+categories:
+  - Mysql
+---
 Setting up an external master
 
 6. Dump from the replica that for the external master

@@ -1,3 +1,9 @@
+---
+draft: true
+title: Data Size Disk Space
+categories:
+  - Mysql
+---
 #### Dealing with growing databases
 
 * Get the size of the current databases

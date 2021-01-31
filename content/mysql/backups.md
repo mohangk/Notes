@@ -1,3 +1,9 @@
+---
+draft: true
+title: Backups
+categories:
+  - Mysql
+---
 ##### Backups
 
 ###### Disk snapshot based backups

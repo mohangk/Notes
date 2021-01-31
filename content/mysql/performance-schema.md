@@ -28,6 +28,10 @@ shows how much time is spent on actual file I/O and how much data is accessed. v
 
   * https://dev.mysql.com/doc/refman/5.7/en/monitor-alter-table-performance-schema.html
 
+### Using performance_schema to monitor replication metrics
+
+  * https://dev.mysql.com/doc/mysql-perfschema-excerpt/5.7/en/performance-schema-replication-tables.html
+
 ### Enabling performance schema on GCP CloudSQL
 
 Performance schema is not enabled by default on CloudSQL. This needs to be enabled but it [cannot be enabled via the web console and instead needs to be done with gcloud](https://cloud.google.com/sql/docs/mysql/flags#tips). 

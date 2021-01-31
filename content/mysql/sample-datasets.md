@@ -1,3 +1,9 @@
+---
+draft: true
+title: Sample Datasets
+categories:
+  - Mysql
+---
 ### Sample datasets
 
 * IMDB - [Old data files — IMDbPY 6.8 documentation](https://imdbpy.readthedocs.io/en/latest/usage/ptdf.html)

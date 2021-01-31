@@ -1,3 +1,9 @@
+---
+draft: true
+title: Mysqlsh
+categories:
+  - Mysql
+---
 ### mysqlshell
 
 #### Available at

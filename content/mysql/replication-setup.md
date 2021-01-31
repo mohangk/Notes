@@ -1,3 +1,9 @@
+---
+draft: true
+title: Replication Setup
+categories:
+  - Mysql
+---
 1. Get mysql packages for debian
 
 * wget http://repo.mysql.com/mysql-apt-config\_0.8.13-1\_all.deb
