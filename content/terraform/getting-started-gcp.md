@@ -5,6 +5,7 @@ categories:
   - Terraform
 tags:
   - iac
+  - gcp
 ---
 
 ## Setting up credentials

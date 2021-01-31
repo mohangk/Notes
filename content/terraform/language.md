@@ -6,6 +6,7 @@ categories:
 tags:
   - iac
 ---
+
 ## String interpolation
 - `"Hello, ${var.name}!"`
 
@@ -46,7 +47,7 @@ variable "zone" {
 ### Reference
 - https://www.terraform.io/docs/configuration/data-sources.html
 
-## locals 
+## `locals` block 
 - Allows for the definition of local variables that can be used in multiple places
 - Not limited to literals, can be expressions or other variables
 - E.g.
@@ -59,3 +60,28 @@ locals {
 }
 
 ```
+
+## `dynamic "varname"` block
+- Expressions can only be used in the top level block constructs when assigning a value to an argument. 
+- You can dynamically construct repeatable nested blocks like setting using a special dynamic block type, which is supported inside resource, data, provider, and provisioner blocks
+- The parameter passed into the block becomes the name of the variable in the subblock
+- E.g.
+```tf
+resource "aws_elastic_beanstalk_environment" "tfenvtest" {
+  name                = "tf-test-name"
+  application         = "${aws_elastic_beanstalk_application.tftest.name}"
+  solution_stack_name = "64bit Amazon Linux 2018.03 v2.11.4 running Go 1.12.6"
+
+  dynamic "setting" {
+    for_each = var.settings
+    content {
+      namespace = setting.value["namespace"]
+      name = setting.value["name"]
+      value = setting.value["value"]
+    }
+  }
+}
+```
+
+## Collection functions
+- `lookup` - returns the single value from a map with the ability to have a default - `lookup(map, key, default)` 
