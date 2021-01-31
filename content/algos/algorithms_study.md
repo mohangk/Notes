@@ -1,4 +1,9 @@
-#Algorithms study
+---
+draft: false
+title: Algorithms study
+categories:
+  - Algos
+---
 
 ## Big O
 

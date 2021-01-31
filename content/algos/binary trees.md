@@ -1,3 +1,9 @@
+---
+draft: false
+title: Binary Trees
+categories:
+  - Algos
+---
 # Different type of searches
 
 ## sequential

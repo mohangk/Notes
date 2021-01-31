@@ -1,3 +1,9 @@
+---
+draft: false
+title: Rate Limiting Algos
+categories:
+  - Algos
+---
 ## Rate limiting algos
 
 Algorithms are another way to create scalable rate-limited APIs. As with request queue libraries and throttling services, there are many rate-limiting algorithms already available.
