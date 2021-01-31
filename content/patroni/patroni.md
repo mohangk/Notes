@@ -1,3 +1,9 @@
+---
+draft: true
+title: Patroni
+categories:
+  - Postgresql
+---
 #### Patroni
 
 * allows customizing creation of new replica
