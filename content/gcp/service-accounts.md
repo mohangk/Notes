@@ -1,3 +1,9 @@
+---
+draft: true
+title: Service Accounts
+categories:
+  - Gcp
+---
 ### intro
 
 - belongs to application or virtual machine

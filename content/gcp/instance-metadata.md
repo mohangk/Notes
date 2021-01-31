@@ -1,3 +1,11 @@
+---
+draft: true
+title: Instance Metadata
+categories:
+  - Gcp
+tags:
+  - google-compute-engine
+---
 ## instance metadata
 
 #### Set the right scopes when creating the

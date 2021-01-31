@@ -1,3 +1,10 @@
+---
+draft: false
+title: Gcloud
+categories:
+  - Gcp
+---
+
 ## gcloud multiple accounts
 
 ### bootsrap configuration

@@ -1,3 +1,9 @@
+---
+draft: true
+title: Neg
+categories:
+  - Gcp
+---
 #### Overview
 
 - NEG - group of backends served by a lb

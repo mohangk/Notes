@@ -1,3 +1,9 @@
+---
+draft: true
+title: Gke Internal Http Loadbalancing
+categories:
+  - Gcp
+---
 ##### Ingress for Internal HTTP(s) Load balancing
 
 - need to setup a proxy only subnet of at least 64 IP - /26

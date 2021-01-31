@@ -1,3 +1,9 @@
+---
+draft: true
+title: Https Ssl Certs
+categories:
+  - Gcp
+---
 ##### Create self signed certs for used by Internal load balancer
 
 https://cloud.google.com/load-balancing/docs/ssl-certificates/self-managed-certs#create-key-and-cert

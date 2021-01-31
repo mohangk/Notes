@@ -1,3 +1,9 @@
+---
+draft: true
+title: Cloud Run
+categories:
+  - Gcp
+---
 ### Steps
 
 1. Create the container on cloud build

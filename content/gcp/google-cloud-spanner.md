@@ -1,3 +1,9 @@
+---
+draft: true
+title: Google Cloud Spanner
+categories:
+  - Gcp
+---
 - you can optionally define parent-child relationships between tables if you want Cloud Spanner to physically co-locate their rows for efficient retrieval
 - If you declare a table to be a child of another table, the primary key column(s) of the parent table must be the prefix of the primary key of the child table. This means if a parent table's primary key is composed of N columns, the primary key of each of its child tables must also be composed of those same N columns, in the same order and starting with the same column.
 

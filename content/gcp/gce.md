@@ -1,3 +1,9 @@
+---
+draft: true
+title: Gce
+categories:
+  - Gcp
+---
 
 ## spinning up an instance
 

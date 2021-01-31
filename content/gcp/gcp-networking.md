@@ -1,3 +1,9 @@
+---
+draft: true
+title: Gcp Networking
+categories:
+  - Gcp
+---
 ## GCP networking basics
 
 - regions vs zones
