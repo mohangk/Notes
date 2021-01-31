@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Read / write operation
 categories:
   - cloud-spanner
