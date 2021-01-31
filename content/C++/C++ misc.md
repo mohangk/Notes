@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Misc
+categories:
+  - C++
+---
 override
 virtual
 this, *this 

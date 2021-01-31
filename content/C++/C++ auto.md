@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Auto
+categories:
+  - C++
+---
 automatic type deduction
 
 in C++ 14 - auto also works for return types

@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Rvalue, Lvalue, Pass By Value, Pass By Reference
+categories:
+  - C++
+---
 http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/
 
  •	If you need a copy of or intend to modify the value sent in, without wanting to change the actual object passed: pass by value.

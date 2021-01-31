@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Time Structs
+categories:
+  - C++
+---
 time_t
 	it is generally implemented as an integral value representing the number of seconds elapsed since 00:00 hours, Jan 1, 1970 UTC
  

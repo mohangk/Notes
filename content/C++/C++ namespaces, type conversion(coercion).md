@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Namespaces, Type Conversion(Coercion)
+categories:
+  - C++
+---
 #namespace
 - :: - namespace resolution operator
 - group methods under the same namespace across multiple files

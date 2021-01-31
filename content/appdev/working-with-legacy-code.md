@@ -1,3 +1,9 @@
+---
+draft: true
+title: Working With Legacy Code
+categories:
+  - Appdev
+---
 ## Working with legacy code
 
 ### Legacy management strategy

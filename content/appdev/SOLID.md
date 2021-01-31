@@ -1,3 +1,9 @@
+---
+draft: true
+title: SOLID
+categories:
+  - Appdev
+---
 SRP - do only one thing. Change one place
 Open close - Open for extension but close for modification
 Liskov substitution  - Replace instance of parent with child without creating any unexpected or incorrect behaviour. Subtypes must be substitutable for their base types.

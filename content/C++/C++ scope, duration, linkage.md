@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Scope, Duration, Linkage
+categories:
+  - C++
+---
 C++ learnings
 
 # initialization

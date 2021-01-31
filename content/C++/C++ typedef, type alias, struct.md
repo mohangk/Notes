@@ -1,3 +1,9 @@
+---
+draft: true
+title: C++ Typedef, Type Alias, Struct
+categories:
+  - C++
+---
 #typedef double, type alias
 
 #typedef 

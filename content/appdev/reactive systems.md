@@ -1,3 +1,9 @@
+---
+draft: true
+title: Reactive Systems
+categories:
+  - Appdev
+---
 Reactive Programming is generally Event-driven, 
 
  •	Callback-based—where anonymous, side-effecting callbacks are attached to event sources, and are being invoked when events pass through the dataflow chain.
