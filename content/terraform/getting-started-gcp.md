@@ -119,7 +119,54 @@ In the TF output
 
 - `service_account.scopes` are set based on the values available here https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes
 
-- Can contain a provisioner block 
+- Can contain a provisioner block that allows for running of a script locally or on the instance
+
+- E.g. additional disk, metadata, startup scripts
+```terraform
+
+resource "google_compute_disk" "pg_disk" {
+  name     = "pg-disk"
+  type     = "pd-ssd"
+  zone     = each.key
+}
+
+resource "google_compute_instance" "pg" {
+  name         = "pg"
+  machine_type = "n2-standard-2" #TODO: Move to var
+
+  tags = ["pg-patroni"]
+  labels = {
+    cluster = local.cluster_name
+  }
+
+  metadata = {
+    METADATA_KEY = "metadata-value"
+  }
+
+  metadata_startup_script = file("local/script.txt")
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud10" #TODO: Move to var
+      size = "10"
+      type = "pd-standard"
+    }
+  }
+
+  attached_disk {
+          source      = google_compute_disk.pg_disk.id
+          device_name = "data"
+  }
+
+  network_interface {
+    subnetwork = google_compute_subnetwork.subnet.name
+  }
+
+  service_account {
+    scopes = ["compute-ro", "service-control","service-management", "logging-write", "monitoring-write", "storage-ro"]
+  }
+}
+```
 
 ## google_compute_firewall
 ```tf
@@ -139,6 +186,7 @@ resource "google_compute_firewall" "default" {
   source_tags = ["web"]
 }
 ```
+
 
 ## google_compute_region_instance_group_manager
 
