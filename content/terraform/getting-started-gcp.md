@@ -188,49 +188,75 @@ resource "google_compute_firewall" "default" {
 ```
 
 
-## google_compute_region_instance_group_manager
+## google_compute_forwarding_rule, google_compute_region_backend_service, google_compute_region_instance_group_manager, google_compute_instance template
 
-- Manage a regional MIG
+- Example shows how to wire up end to end from *Internal LB (forwarding-rule)* -> backend-service -> compute-regional-instance-groups -> instance-template
 
 ```tf
-resource "google_compute_health_check" "autohealing" {
-  name                = "autohealing-health-check"
-  check_interval_sec  = 5
-  timeout_sec         = 5
-  healthy_threshold   = 2
-  unhealthy_threshold = 10 # 50 seconds
 
-  http_health_check {
-    request_path = "/healthz"
-    port         = "8080"
+
+resource "google_compute_region_backend_service" "default" {
+  load_balancing_scheme = "INTERNAL_MANAGED"
+
+  backend {
+    group          = google_compute_region_instance_group_manager.rigm.instance_group
+    balancing_mode = "UTILIZATION"
+    capacity_scaler = 1.0
   }
+
+  region      = "us-central1"
+  name        = "region-service"
+  protocol    = "HTTP"
+  timeout_sec = 10
+
+  health_checks = [google_compute_region_health_check.default.id]
 }
 
-resource "google_compute_region_instance_group_manager" "appserver" {
-  name = "appserver-igm"
+data "google_compute_image" "debian_image" {
+  family   = "debian-9"
+  project  = "debian-cloud"
+}
 
-  base_instance_name         = "app"
-  region                     = "us-central1"
-  distribution_policy_zones  = ["us-central1-a", "us-central1-f"]
-
+resource "google_compute_region_instance_group_manager" "rigm" {
+  region   = "us-central1"
+  name     = "rbs-rigm"
   version {
-    instance_template = google_compute_instance_template.appserver.id
+    instance_template = google_compute_instance_template.instance_template.id
+    name              = "primary"
+  }
+  base_instance_name = "internal-glb"
+  target_size        = 1
+}
+
+resource "google_compute_instance_template" "instance_template" {
+  name         = "template-region-service"
+  machine_type = "e2-medium"
+
+  network_interface {
+    network    = google_compute_network.default.id
+    subnetwork = google_compute_subnetwork.default.id
   }
 
-  target_pools = [google_compute_target_pool.appserver.id]
-  target_size  = 2
-
-  named_port {
-    name = "custom"
-    port = 8888
+  disk {
+    source_image = data.google_compute_image.debian_image.self_link
+    auto_delete  = true
+    boot         = true
   }
 
-  auto_healing_policies {
-    health_check      = google_compute_health_check.autohealing.id
-    initial_delay_sec = 300
+  tags = ["allow-ssh", "load-balanced-backend"]
+}
+
+resource "google_compute_region_health_check" "default" {
+  region = "us-central1"
+  name   = "rbs-health-check"
+  http_health_check {
+    port_specification = "USE_SERVING_PORT"
   }
 }
 ```
+
+### Reference 
+- https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_region_backend_service
 
 
 ## Reference

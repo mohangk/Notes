@@ -63,7 +63,7 @@ locals {
 
 ## `dynamic "varname"` block
 - Expressions can only be used in the top level block constructs when assigning a value to an argument. 
-- You can dynamically construct repeatable nested blocks like setting using a special dynamic block type, which is supported inside resource, data, provider, and provisioner blocks
+- You can dynamically construct repeatable nested blocks like settings using a special dynamic block type, which is supported inside resource, data, provider, and provisioner blocks
 - The parameter passed into the block becomes the name of the variable in the subblock
 - E.g.
 ```tf
