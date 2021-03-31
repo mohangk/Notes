@@ -1,6 +1,6 @@
 ---
 draft: true
-title: Neg
+title: NEG - Network endpoint groups
 categories:
   - Gcp
 ---

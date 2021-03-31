@@ -1,8 +1,10 @@
 ---
-draft: true
-title: Gke Internal Http Loadbalancing
+draft: false
+title: GKE Internal Http Loadbalancing
 categories:
   - Gcp
+tags:
+  - networking
 ---
 ##### Ingress for Internal HTTP(s) Load balancing
 

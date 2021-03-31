@@ -31,3 +31,4 @@ VMs --> Instance group --> backend service --> fowarding rules
 
 ### References
 - https://cloud.google.com/load-balancing/docs/backend-service
+- https://cloud.google.com/load-balancing/docs/ssl-certificates/encryption-to-the-backends
