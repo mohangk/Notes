@@ -54,6 +54,39 @@ CREATE TABLE Albums (
 ```
 ## Foreign keys
 
+- Enforces referential integrity
+- CASCADE DELETE is not supported on foreign keys. The rows that refer to the key will need to be deleted or values set to null before the parent row can be deleted
+
+```sql
+-- Creating a table with a foreign key relation
+CREATE TABLE Orders (
+  OrderID INT64 NOT NULL,
+  CustomerID INT64 NOT NULL,
+  Quantity INT64 NOT NULL,
+  ProductID INT64 NOT NULL,
+  CONSTRAINT FK_CustomerOrder FOREIGN KEY (CustomerID) REFERENCES Customers (CustomerID)
+) PRIMARY KEY (OrderID);
+
+-- Adding to an existing table
+ALTER TABLE Orders
+  ADD CONSTRAINT FK_ProductOrder FOREIGN KEY (ProductID) REFERENCES Products (ProductID);
+```
+## Commit timestamps
+
+- The allow_commit_timestamp column option allows you to atomically store the commit timestamp into a column. Using the commit timestamps stored in tables, you can determine the exact ordering of mutations and build features like changelogs.
+- Cloud Spanner commit timestamps have microsecond granularity, and they are converted to nanoseconds when stored in TIMESTAMP columns.
+
+```sql
+-- example of table schema 
+CREATE TABLE Performances (
+    ...
+    LastUpdateTime  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true)
+    ...
+) PRIMARY KEY (...);
+
+-- UPDATE Performances SET LastUpdated = PENDING_COMMIT_TIMESTAMP() WHERE SingerId=1 AND VenueId=2 AND EventDate="2015-10-21"
+
+```
 ## Splits
 
 - Multipe splits to a node
