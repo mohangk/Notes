@@ -1,3 +1,9 @@
+---
+draft: true
+title: Kotlin_tut
+categories:
+  - Kotlin
+---
 
 # Kotlin notes
 

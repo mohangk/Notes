@@ -1,3 +1,9 @@
+---
+draft: true
+title: Java Concurrency
+categories:
+  - Java
+---
 # Java executers
 
 - https://zeroturnaround.com/rebellabs/fixedthreadpool-cachedthreadpool-or-forkjoinpool-picking-correct-java-executors-for-background-tasks/

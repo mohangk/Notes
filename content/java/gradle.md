@@ -1,3 +1,9 @@
+---
+draft: true
+title: Gradle
+categories:
+  - Java
+---
 #buildscript
 - these are the dependencies for gradle to run 
 

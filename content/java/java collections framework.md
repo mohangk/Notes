@@ -1,3 +1,9 @@
+---
+draft: true
+title: Java Collections Framework
+categories:
+  - Java
+---
 
 # java collections framework 
 - only Objects  - no primitives
