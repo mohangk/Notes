@@ -1,3 +1,9 @@
+---
+draft: true
+title: Resolv Conf
+categories:
+  - Networking
+---
 ##### /etc/resolve.conf
 
 ##### Background

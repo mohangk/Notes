@@ -1,3 +1,9 @@
+---
+draft: true
+title: Networking
+categories:
+  - Networking
+---
 #### Random debugging on mac os x
 
 - networksetup -listnetworkserviceorder

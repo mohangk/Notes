@@ -1,3 +1,9 @@
+---
+draft: true
+title: Bastion Hosts
+categories:
+  - Networking
+---
 1. Pro
    - Reduces attack surface
    - Easier to lock down
