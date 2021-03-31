@@ -1,8 +1,8 @@
 ---
 draft: true
-title: Patroni
+title: Patroni FAQ - the missing docs
 categories:
-  - Postgresql
+  - Patroni
 ---
 #### Patroni
 
