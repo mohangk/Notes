@@ -1,3 +1,9 @@
+---
+draft: true
+title: Expert Beginner
+categories:
+  - Mgmt
+---
 ## Dreyfus five stage model involved in skill acquisition
 
 - Novice

@@ -1,3 +1,9 @@
+---
+draft: true
+title: What_i_learned_from_bbm
+categories:
+  - Mgmt
+---
 ### Remaking Medusa
 
 timezones kills you and your team, multiple offices kills you

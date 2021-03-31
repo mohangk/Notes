@@ -1,3 +1,9 @@
+---
+draft: true
+title: Cto_survival_guide
+categories:
+  - Mgmt
+---
 orgs at different scales
 
 multiple offices

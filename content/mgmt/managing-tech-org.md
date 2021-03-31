@@ -1,3 +1,9 @@
+---
+draft: true
+title: Managing Tech Org
+categories:
+  - Mgmt
+---
 ## Outline
 
 1. Dev process
