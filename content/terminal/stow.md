@@ -1,3 +1,9 @@
+---
+draft: true
+title: Stow
+categories:
+  - Terminal
+---
 #### GNU Stow
 
 stow -v -R -t ~ git

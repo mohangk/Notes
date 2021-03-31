@@ -1,3 +1,9 @@
+---
+draft: true
+title: Vim
+categories:
+  - Terminal
+---
 ### native packages
 
 :packadd - start a plugin that was put into "opt" folder (not start and hence not autostarted)

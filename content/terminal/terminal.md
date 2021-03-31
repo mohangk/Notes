@@ -1,3 +1,9 @@
+---
+draft: true
+title: Terminal
+categories:
+  - Terminal
+---
 
 
 ### mdfind

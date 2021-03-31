@@ -1,3 +1,9 @@
+---
+draft: true
+title: Bash
+categories:
+  - Terminal
+---
 ###### systemctl
 
 systemctl list-unit-files  -- get all installed systemd files
@@ -48,4 +54,10 @@ do
   [ -d "$todir" ] || mkdir "$todir" 
   mv "$i" "$todir" 
 done
+```
+
+#### get the latest deb from an apt repo
+
+```bash
+curl https://updates.signal.org/desktop/apt/dists/xenial/main/binary-amd64/Packages.gz | zcat | grep Filename | sed 's_Filename: _https://updates.signal.org/desktop/apt/_'
 ```

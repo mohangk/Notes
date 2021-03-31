@@ -1,3 +1,9 @@
+---
+draft: true
+title: Vim Go Tutorial
+categories:
+  - Terminal
+---
 #### Basic commands
 
 - GoBuild, GoInstall, GoTest, GoRun

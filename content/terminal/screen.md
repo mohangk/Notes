@@ -1,3 +1,9 @@
+---
+draft: true
+title: Screen
+categories:
+  - Terminal
+---
 You can do it in screen the terminal multiplexer.
 
 To split vertically: ctrla then |.
