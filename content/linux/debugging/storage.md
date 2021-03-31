@@ -1,3 +1,9 @@
+---
+draft: true
+title: Storage
+categories:
+  - Linux
+---
 ### Storage
 
 #### Identifying processes stuck on IO

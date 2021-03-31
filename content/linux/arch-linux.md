@@ -1,3 +1,9 @@
+---
+draft: true
+title: Arch Linux
+categories:
+  - Linux
+---
 ### installation guides
 
 <https://linoxide.com/distros/beginners-arch-linux-installation-guide/>

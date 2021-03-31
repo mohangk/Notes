@@ -1,3 +1,9 @@
+---
+draft: true
+title: Tcp States And Debugging
+categories:
+  - Linux
+---
 1. TCP handshake:
 - client -> server: syn ( client: syn-sent)
 

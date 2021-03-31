@@ -1,3 +1,9 @@
+---
+draft: true
+title: Disks
+categories:
+  - Linux
+---
 ##### 
 
 #### Disk performance

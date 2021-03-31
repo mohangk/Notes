@@ -1,3 +1,9 @@
+---
+draft: true
+title: Zfs
+categories:
+  - Linux
+---
 ##### zpool
 
 - highest level of storage hierarchy. Consists of one or more vdevs. Data distributed across vdevs. No fault tolerance at the pool level - only within the vdev. 2 zpools cannot share a vdev.

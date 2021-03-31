@@ -1,3 +1,9 @@
+---
+draft: true
+title: Filesystem
+categories:
+  - Linux
+---
 
 # Structure - partitions & file systems
 

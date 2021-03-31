@@ -1,3 +1,9 @@
+---
+draft: true
+title: Debugging Hung Process
+categories:
+  - Linux
+---
 1.  What is the overall load of the box?
    
    1. top - look at load / look at per CPU utilization
