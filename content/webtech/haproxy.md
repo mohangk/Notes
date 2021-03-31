@@ -1,3 +1,9 @@
+---
+draft: true
+title: Haproxy
+categories:
+  - Webtech
+---
 1. setup haproxy and test reloading dynamically 
 - first try how it handles adding backends with a reload  when there are long lived connections
 - setup haproxy to forward long lived tcp connections to a couple of listening nc servers 

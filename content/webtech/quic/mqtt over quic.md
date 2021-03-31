@@ -1,3 +1,9 @@
+---
+draft: true
+title: Mqtt Over Quic
+categories:
+  - Webtech
+---
 https://github.com/ngtcp2/ngtcp2
 
 the shortcomings of TCP in IoT domains are as follows: (i) Connection startup latency is highly affected by the TCP handshake. This handshake requires 1 Round-Trip Time (RTT) for TCP and 2 or 3 RTTs when TLS (Transport Layer Security) is added to this protocol [11]. The overhead impact is even higher in IoT scenarios where unreliable wireless links cause frequent connection drops [12]. In these scenarios, imposing a high connection establishment overhead for the exchange of a small amount of data wastes the resources of devices. TCP Fast Open [13] seeks to address this problem by piggybacking data in SYN segments in repeated connections to the same server. This solution is not scalable since the TCP SYN segment can only fit a limited amount of data [14]. (ii) IoT devices are often mobile, and as such, supporting connection migration is an essential requirement [15]–[18]. However, any change in network parameters (such as IP address or port) breaks the connection. In this case, either the connection must be re-established, or a gateway is required to reroute the data flow. Unfortunately, these solutions increase communication delay and overhead, which might not be acceptable in mission-critical applications [18]. (iii) To preserve energy resources, IoT devices usually transition between sleep and awake states. In this case, a TCP connection cannot be kept open without employing keepalive packets. These keep-alive mechanisms, however, increase resource utilization and bandwidth consumption. Without an external keep-alive mechanism, IoT devices are obliged to reestablish connections every time they wake from the sleep mode. (iv) In disastrous events such as unexpected reboots or a device crash, TCP connections between client and server might end up out of state
