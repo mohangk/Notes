@@ -1,3 +1,9 @@
+---
+draft: true
+title: Phase 2  Architectural Change
+categories:
+  - Talks
+---
 Phase 1:  Replatform and transition
 
 - CI 

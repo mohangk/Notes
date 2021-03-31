@@ -1,3 +1,9 @@
+---
+draft: true
+title: Bugs_discussion
+categories:
+  - Talks
+---
 - what do you do when it happens?
   - fix it 
   - understand why - mini postmortem?

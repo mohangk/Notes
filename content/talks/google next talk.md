@@ -1,3 +1,9 @@
+---
+draft: true
+title: Google Next Talk
+categories:
+  - Talks
+---
 Improvements
 
 Slide 23 - provide a diagram

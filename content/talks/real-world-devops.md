@@ -1,3 +1,9 @@
+---
+draft: true
+title: Real World Devops
+categories:
+  - Talks
+---
 Intro
 
 - Devops is not a job title 
