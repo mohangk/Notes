@@ -1,3 +1,9 @@
+---
+draft: true
+title: Ingress Vs Neg
+categories:
+  - K8s
+---
 
 
 ### Why NEG and not plain ingress using node ports?

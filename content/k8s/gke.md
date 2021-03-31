@@ -1,3 +1,9 @@
+---
+draft: true
+title: Gke
+categories:
+  - K8s
+---
 # GKE
 
 ## Setting up a private GKE cluster

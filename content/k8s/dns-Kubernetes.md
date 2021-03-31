@@ -1,3 +1,9 @@
+---
+draft: true
+title: Dns Kubernetes
+categories:
+  - K8s
+---
 ### DNS and Kubernetes
 
 #### Object in k8 that has DNS entries

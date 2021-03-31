@@ -1,3 +1,9 @@
+---
+draft: true
+title: Storage
+categories:
+  - K8s
+---
 ### k8 storage
 
 #### persistent volume vs volume

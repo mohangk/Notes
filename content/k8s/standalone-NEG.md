@@ -1,3 +1,9 @@
+---
+draft: true
+title: Standalone NEG
+categories:
+  - K8s
+---
 #### TCP proxy connection to container using NEG
 
 Creating a standalone NEG

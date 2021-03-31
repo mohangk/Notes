@@ -1,3 +1,9 @@
+---
+draft: true
+title: Docker
+categories:
+  - K8s
+---
 ### docker basics
 
 registry - stores all images

@@ -1,3 +1,9 @@
+---
+draft: true
+title: Kubernetes Gce Gcb Gcr
+categories:
+  - K8s
+---
 - tis
 - expose a different port than what is listening on (targetPort)
 - multi region compute clusters

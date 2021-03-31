@@ -1,3 +1,9 @@
+---
+draft: true
+title: Gke_istio
+categories:
+  - K8s
+---
 ```
 gcloud beta container clusters create $CLUSTER --zone $ZONE \    --addons Istio \    --istio-config auth=MTLS_PERMISSIVE
 ```

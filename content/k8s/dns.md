@@ -1,3 +1,9 @@
+---
+draft: true
+title: Dns
+categories:
+  - K8s
+---
 ### DNS and k8
 
 ##### All services have domain names

@@ -1,3 +1,9 @@
+---
+draft: true
+title: Kubectl
+categories:
+  - K8s
+---
 ### kubectl
 
 #### configuration

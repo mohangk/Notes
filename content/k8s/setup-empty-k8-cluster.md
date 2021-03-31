@@ -1,3 +1,9 @@
+---
+draft: true
+title: Setup Empty K8 Cluster
+categories:
+  - K8s
+---
 ## vBasic K8 cluster with NAT
 
 ## networking
