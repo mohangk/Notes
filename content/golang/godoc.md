@@ -1,3 +1,9 @@
+---
+draft: true
+title: Godoc
+categories:
+  - Golang
+---
 
 ## Install
 go get golang.org/x/tools/cmd/godoc

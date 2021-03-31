@@ -1,3 +1,9 @@
+---
+draft: true
+title: Image
+categories:
+  - Golang
+---
 ###### Introduction
 
 - Allows reading of image information

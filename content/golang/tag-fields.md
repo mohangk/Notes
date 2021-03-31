@@ -1,3 +1,9 @@
+---
+draft: true
+title: Tag Fields
+categories:
+  - Golang
+---
 #### Tag fields
 
 - attach meta-information to a field, can be retrieved using reflection

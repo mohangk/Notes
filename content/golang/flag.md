@@ -1,3 +1,9 @@
+---
+draft: true
+title: Flag
+categories:
+  - Golang
+---
 ##### flag module
 
 ###### flag.String

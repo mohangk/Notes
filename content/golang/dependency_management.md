@@ -1,3 +1,9 @@
+---
+draft: true
+title: Dependency_management
+categories:
+  - Golang
+---
 ##### Get a dependency
 
 go get path/to/dependency

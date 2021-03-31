@@ -1,3 +1,9 @@
+---
+draft: true
+title: Time
+categories:
+  - Golang
+---
 ##### time
 
 ##### important concepts

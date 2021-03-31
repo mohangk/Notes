@@ -1,3 +1,9 @@
+---
+draft: true
+title: Net Http (Conflicting Copy)
+categories:
+  - Golang
+---
 ## net/http
 
 ###### import "net/http"

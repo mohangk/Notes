@@ -1,3 +1,9 @@
+---
+draft: true
+title: Structs
+categories:
+  - Golang
+---
 ## Allocation of data with `new`
 
 

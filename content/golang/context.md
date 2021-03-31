@@ -1,3 +1,9 @@
+---
+draft: true
+title: Context
+categories:
+  - Golang
+---
 #### Context
 
 - Exist to provide with a way to timeout and terminate goroutines

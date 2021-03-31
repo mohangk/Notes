@@ -1,3 +1,9 @@
+---
+draft: true
+title: Go Concurrency Patterns
+categories:
+  - Golang
+---
 ##### Go Concurrency Patterns
 
 - the perctiption of doing multpile things at the same time

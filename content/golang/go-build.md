@@ -1,3 +1,9 @@
+---
+draft: true
+title: Go Build
+categories:
+  - Golang
+---
 ### go build
 
 #### Building multiple packages

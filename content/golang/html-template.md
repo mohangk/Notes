@@ -1,3 +1,9 @@
+---
+draft: true
+title: Html Template
+categories:
+  - Golang
+---
 ## html/template
 
 import "html/template"

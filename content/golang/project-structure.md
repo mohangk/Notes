@@ -1,3 +1,9 @@
+---
+draft: true
+title: Project Structure
+categories:
+  - Golang
+---
 ### How to structure go projects
 
 ##### Top level directories

@@ -1,3 +1,9 @@
+---
+draft: true
+title: New_composite_literal_make
+categories:
+  - Golang
+---
 ### difference between new, composite literal and make
 
 #### new

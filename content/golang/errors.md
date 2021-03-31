@@ -1,3 +1,9 @@
+---
+draft: true
+title: Errors
+categories:
+  - Golang
+---
 ### Sentinel errors
 
 - Global variables that wrap an error object

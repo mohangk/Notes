@@ -1,3 +1,9 @@
+---
+draft: true
+title: Passing Variables And Method Receivers
+categories:
+  - Golang
+---
 [CodeReviewComments · golang/go Wiki · GitHub](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
 
 [go - Pointers vs. values in parameters and return values - Stack Overflow](https://stackoverflow.com/questions/23542989/pointers-vs-values-in-parameters-and-return-values)
