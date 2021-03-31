@@ -1,3 +1,9 @@
+---
+draft: true
+title: Procrastination
+categories:
+  - Psychology
+---
 ### Procrastination
 
 - its a emotional management issue, not a time management issue

@@ -1,3 +1,9 @@
+---
+draft: true
+title: Ray Dalio Changing World Order
+categories:
+  - Econ-Finance
+---
 ##### [Chapter 2: Money, Credit and Economic Activity](https://www.linkedin.com/pulse/money-credit-debt-ray-dalio/)
 
 Money and credit - are associated with wealth, they are not wealth.  To create more wealth - one has to be more productive.  Short term debt cycles happen when the regulation between the amount of credit by the federal bank is not perfect, drives inflation.  

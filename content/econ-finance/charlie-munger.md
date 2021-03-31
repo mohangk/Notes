@@ -1,3 +1,9 @@
+---
+draft: true
+title: Charlie Munger
+categories:
+  - Econ-Finance
+---
 Charlie munger 
 
 To get what you want, deserve what you want. Trust, success, and admiration are earned. 
