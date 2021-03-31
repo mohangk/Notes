@@ -44,8 +44,8 @@ tags:
 ETCD_NAME="SELF_HOST"
 ETCD_DATA_DIR=/var/lib/etcd/etcd-cluster1
 ETCD_ENABLE_V2=True
-ETCD_LISTEN_CLIENT_URLS="http://SELF_IP:2379"
-ETCD_LISTEN_PEER_URLS="http://SELF_IP:2380"
+ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
+ETCD_LISTEN_PEER_URLS="http://0.0.0.0:2380"
 ETCD_ADVERTISE_CLIENT_URLS="http://SELF_IP:2379"
 ETCD_INITIAL_ADVERTISE_PEER_URLS="http://SELF_IP:2380"
 ETCD_INITIAL_CLUSTER="etcd-us-central1-a=http://HOST_ZONE_A:2380,etcd-us-central1-b=http://HOST_ZONE_B:2380,etcd-us-central1-c=http://HOST_ZONE_C:2380"                                                           
@@ -115,3 +115,9 @@ ssh 10.10.0.8 "sudo systemctl restart etcd"
   --initial-cluster etcda=http://10.10.0.6:2380,etcdb=http://10.10.0.7:2380,etcdc=http://10.10.0.8:2380 \
   --initial-cluster-state new 
 ```
+
+
+### References:
+
+- https://thenewstack.io/tutorial-set-up-a-secure-and-highly-available-etcd-cluster/
+- https://etcd.io/docs/v3.4.0/dev-guide/interacting_v3/
