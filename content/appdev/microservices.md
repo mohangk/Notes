@@ -6,7 +6,10 @@ categories:
 ---
 ## Monolith to microservices
 
-https://martinfowler.com/articles/break-monolith-into-microservices.html
+- https://martinfowler.com/articles/break-monolith-into-microservices.html
+
+- How to handle microservice proliferation
+  - https://eng.uber.com/microservice-architecture/
 
 
 ## Common patterns

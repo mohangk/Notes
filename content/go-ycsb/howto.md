@@ -1,3 +1,9 @@
+---
+draft: true
+title: Howto
+categories:
+  - Go-Ycsb
+---
 ##### Populate the YCSB database
 
 ./bin/go-ycsb load mysql -p mysql.host=127.0.0.1 -p mysql.port=3306 -p mysq.user=root -p mysql.db=test -p recordcount=1000 -p threadcount=2
